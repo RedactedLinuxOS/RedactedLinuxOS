@@ -1,0 +1,2 @@
+# Aurora-monorepo
+My project
