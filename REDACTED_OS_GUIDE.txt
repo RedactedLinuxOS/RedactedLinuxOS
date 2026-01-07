@@ -1,0 +1,182 @@
+REDACTED OS — USER GUIDE (LIVE ISO + INSTALL + DESKTOP)
+======================================================
+
+LEGAL & DOCUMENTATION NOTICE
+----------------------------
+redacted OS is an **independent, community-built, Arch-based Linux project**.
+
+- redacted OS is **not affiliated with, endorsed by, or supported by Arch Linux**.
+- "Arch Linux" and "Arch Wiki" are trademarks of their respective owners.
+- Documentation linked below is provided for reference only.
+
+Because redacted OS is Arch-based and uses the same core technologies,
+**most Arch Linux documentation applies directly**, but responsibility for system
+changes remains with the user.
+
+-----------------------------------------------------------------------
+
+1) What is redacted OS?
+----------------------
+redacted OS is an Arch-based Linux system that provides:
+
+- A TTY-first live ISO (boots to terminal by default)
+- Three installation paths (manual, guided TTY installer, optional live desktop test)
+- Full branding (TTY prompt, login screen, desktop defaults)
+- Optional Plymouth and GRUB theming
+- No forced GUI workflow
+
+-----------------------------------------------------------------------
+
+2) Boot behavior (important)
+----------------------------
+The ISO **always boots to a TTY**.
+
+You will see a small hint banner:
+- New users:  sudo redacted-install
+- Veteran users: ignore and proceed manually
+
+This design is intentional and follows Arch-style workflows.
+
+-----------------------------------------------------------------------
+
+3) Installation paths
+---------------------
+
+A) Veteran manual install (challenge mode)
+- Boot ISO → TTY
+- Manually partition disks, pacstrap, configure system, install bootloader
+- Reboot → login → desktop (if installed)
+
+B) Easy installer (recommended for most users)
+- Boot ISO → TTY
+- Run:
+    sudo redacted-install
+- Choose disk, filesystem, desktop, and optional features
+- Reboot → branded login → desktop
+
+C) Live desktop test environment (optional)
+- Boot ISO → TTY
+- Manually start the desktop (KDE)
+- This environment runs entirely in RAM (changes are NOT saved)
+- Desktop icon "Install redacted OS" runs:
+    sudo redacted-install
+- Reboot → installed desktop
+
+-----------------------------------------------------------------------
+
+4) Easy installer (TTY menu)
+----------------------------
+The guided installer lets you select:
+
+- Filesystem: ext4 or btrfs
+- Desktop: KDE Plasma / GNOME / XFCE / CLI only
+- Optional components:
+  * Plymouth boot splash
+  * Firewall (UFW)
+  * Bluetooth
+  * Printing (CUPS)
+  * Gaming extras
+  * Developer tools
+  * NVIDIA proprietary driver
+  * Mesa Vulkan stack
+
+-----------------------------------------------------------------------
+
+5) Desktop & branding
+---------------------
+After installation:
+
+- System boots to a branded login screen (SDDM)
+- Desktop defaults use redacted theming
+- Users can freely change themes, wallpapers, and settings
+
+Rainbow username animation appears in:
+- TTY shell prompt
+- Terminal emulators
+- Login screen username field
+
+Reduce motion (accessibility):
+    redacted-reduce-motion on
+    sudo redacted-sddm-reduce-motion on
+
+-----------------------------------------------------------------------
+
+6) Troubleshooting & help (SAFE, RECOMMENDED)
+---------------------------------------------
+
+PRIMARY DOCUMENTATION (recommended):
+Arch Wiki:
+https://wiki.archlinux.org
+
+Most commands and fixes on the Arch Wiki work unchanged on redacted OS.
+
+COMMONLY USEFUL PAGES:
+- Installation guide:
+  https://wiki.archlinux.org/title/Installation_guide
+- Network configuration:
+  https://wiki.archlinux.org/title/Network_configuration
+- KDE Plasma:
+  https://wiki.archlinux.org/title/KDE
+- Bootloaders:
+  https://wiki.archlinux.org/title/GRUB
+  https://wiki.archlinux.org/title/Systemd-boot
+- Graphics drivers:
+  https://wiki.archlinux.org/title/NVIDIA
+  https://wiki.archlinux.org/title/Xorg
+
+COMMUNITY SUPPORT (advanced users):
+Arch Linux Forums:
+https://bbs.archlinux.org
+
+-----------------------------------------------------------------------
+
+7) Built-in diagnostics
+-----------------------
+Run:
+    redacted-doctor
+
+This checks common issues such as:
+- Networking status
+- Branding files
+- Display manager configuration
+
+-----------------------------------------------------------------------
+
+8) Building the ISO (maintainers)
+---------------------------------
+On an Arch-based host system:
+
+    sudo pacman -S --needed archiso rsync
+    unzip redacted-os.zip
+    cd redacted-os/archiso-profile
+    sudo ./build.sh
+
+The ISO output folder will contain:
+- redacted OS ISO image
+- This guide (REDACTED_OS_GUIDE.txt)
+
+-----------------------------------------------------------------------
+
+9) Important notes
+------------------
+- redacted OS does not replace Arch Linux documentation
+- Users are encouraged to learn using the Arch Wiki
+- No warranties are provided; use at your own risk
+
+END OF GUIDE
+
+
+About command:
+  redacted-about
+
+Polish additions
+----------------
+- Version info:
+    redacted-version
+  (reads /etc/redacted-release)
+
+- Installer logs (installed system):
+    /var/log/redacted-install.log
+
+- TTY welcome message:
+  Shown once per user on first TTY login after installation.
