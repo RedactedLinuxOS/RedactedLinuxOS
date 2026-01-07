@@ -1,2 +1,1 @@
-# Aurora-monorepo
-My project
+# Redacted OS
