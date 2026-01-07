@@ -1,6 +1,6 @@
 redacted OS is a TTY-first, Arch-based Linux project focused on control, transparency, and learning. It boots into a terminal by default and provides both manual and guided TTY installation paths. Not affiliated with or endorsed by Arch Linux.
 
-Full Disclaimer — redacted OS
+Full Disclaimer — 
 redacted OS is an independent, community-developed Linux project.
 redacted OS is an Arch-based Linux distribution that uses Arch Linux tools, concepts, and infrastructure as its foundation. redacted OS is not affiliated with, endorsed by, sponsored by, or officially connected to Arch Linux or the Arch Linux project in any way. All trademarks, service marks, and logos referenced remain the property of their respective owners.
 redacted OS is provided “as is”, without warranty of any kind, express or implied. The developers and contributors of redacted OS make no guarantees regarding stability, security, suitability, or fitness for any particular purpose. Use of this software is entirely at the user’s own risk.
